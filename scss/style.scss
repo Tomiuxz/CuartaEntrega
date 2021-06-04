@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
 @import './resets';
 @import './variables';
 @import './fonts';
 
 body {
-    background-color: $color-bg;
-    color: $color-text;
+    background-color: $color-black;
+    color: $color-white;
     font-weight: map-get($font-weights, medium);
+    margin-top: 100px;
+    font-family: $fuente-html;
 
     .main {
         width: 100%;
@@ -41,7 +41,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        background-color: $color-accent;
+        background-color: $color-lightblue;
         -webkit-background-clip: text;
         color: transparent;
     }
@@ -52,7 +52,7 @@ a {
 .carousel-item {
     height: 32rem;
     background: #777;
-    color: white;
+    color: $color-white;
     position: relative;
     background-position: center;
     background-size: contain;
@@ -89,7 +89,7 @@ a {
     border: 2px solid rgb(0, 255, 255);
     border-radius: 0.5em;
     background: rgb(255, 255, 255);
-    color: $color-bg;
+    color: $color-black;
     transition: all 0.5s;
 
     .button:after {
@@ -116,7 +116,7 @@ a {
 /*----------------------QUIENES SOMOS----------------------*/
 
 .bio-title {
-    color: $color-text;
+    color: $color-white;
     background-image: linear-gradient(to bottom, #30d0d05d 0%, #330867 100%);
 }
 
@@ -135,7 +135,7 @@ body {
             content: "";
             width: 10rem;
             height: 0.8rem;
-            background-color: $color-accent;
+            background-color: $color-lightblue;
             position: absolute;
             bottom: -2rem;
             left: 50%;
@@ -153,7 +153,7 @@ body {
 
     .card {
         width: 23rem;
-        background-color: $color-text;
+        background-color: $color-white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -177,7 +177,7 @@ body {
 
     .card h3 {
         font-size: 2.5rem;
-        color: $color-bg;
+        color: $color-black;
     }
 }
 
@@ -215,7 +215,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #023d39;
+    background: $color-darkgreen;
 
     &::before {
         content: '';
@@ -224,7 +224,7 @@ body {
         left: 0;
         width: 50%;
         height: 110%;
-        background: #000000;
+        background: $color-black;
     }
 }
 
@@ -241,17 +241,17 @@ body {
     top: 40px;
     width: 350px;
     height: calc(100% - 80px);
-    background: #012725;
+    background: $color-darkgreen2;
     z-index: 1;
     padding: 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: $color-black;
 
     h2 {
-        color: #fff;
+        color: $color-white;
         font-size: 24px;
         font-weight: 500;
     }
@@ -281,7 +281,7 @@ body {
     }
 
     ul.info li span:nth-child(2) {
-        color: #fff;
+        color: $color-white;
         margin-left: 10px;
         font-weight: 300;
     }
@@ -312,12 +312,12 @@ body {
     margin-left: 150px;
     width: calc(100% - 150px);
     height: 100%;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.15);
-    color: black;
+    background: $color-white;
+    box-shadow: $color-black;
+    color: $color-black;
 
     h2 {
-        color: #0f3959;
+        color: $color-darkblue;
         font-size: 24px;
         font-weight: 500;
     }
@@ -360,7 +360,7 @@ body {
                 font-size: 12px;
                 font-weight: 400;
                 letter-spacing: 1px;
-                color: #095a55;
+                color: $color-turquoise;
                 font-weight: 500;
             }
 
@@ -369,21 +369,21 @@ body {
                 font-size: 12px;
                 font-weight: 400;
                 letter-spacing: 1px;
-                color: #095a55;
+                color: $color-turquoise;
                 font-weight: 500;
             }
 
             &[type="submit"] {
                 position: relative;
                 cursor: pointer;
-                background: #095a55;
-                color: #fff;
+                background: $color-turquoise;
+                color: $color-white;
                 border: none;
                 max-width: 150px;
                 padding: 12px;
 
                 &:hover {
-                    background: #0d9480;
+                    background: $color-lightblue;
                 }
             }
         }
@@ -405,7 +405,7 @@ body {
                 font-size: 12px;
                 font-weight: 400;
                 letter-spacing: 1px;
-                color: #095a55;
+                color: $color-turquoise;
                 font-weight: 500;
             }
 
@@ -414,7 +414,7 @@ body {
                 font-size: 12px;
                 font-weight: 400;
                 letter-spacing: 1px;
-                color: #095a55;
+                color: $color-turquoise;
                 font-weight: 500;
             }
         }
@@ -435,7 +435,7 @@ body {
         width: 90%;
         min-width: auto;
         margin: 20px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        box-shadow: $color-black;
     }
 
     .contactInfo {
@@ -458,7 +458,7 @@ body {
 
 @media (max-width : 992px) {
     .contacto1 {
-        background: #000000;
+        background: $color-black;
 
         &::before {
             display: none;
@@ -467,7 +467,7 @@ body {
 
     .container1 {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         & .contactForm {
             width: 100%;
