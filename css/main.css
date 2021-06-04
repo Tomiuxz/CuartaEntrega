@@ -102,6 +102,11 @@ a {
   color: white;
   background-image: linear-gradient(to bottom, #30d0d05d 0%, #330867 100%); }
 
+.bio {
+  width: 75%;
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
 /*-------------------------CATALOGO-------------------------*/
 body .heading {
   text-transform: uppercase;
